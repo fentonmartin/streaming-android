@@ -143,8 +143,7 @@ public class PublishTest extends TestDetailFragment implements R5ConnectionListe
 
         if(TestContent.GetPropertyBool("audio_on")) {
             //attach a microphone
-            R5Microphone mic = new R5Microphone();
-            publish.attachMic(mic);
+            attachMic();
         }
 
         preview.attachStream(publish);
@@ -161,6 +160,11 @@ public class PublishTest extends TestDetailFragment implements R5ConnectionListe
             cam.startPreview();
         }
 
+    }
+
+    protected void attachMic(){
+        R5Microphone mic = new R5Microphone();
+        publish.attachMic(mic);
     }
 
     protected Camera openFrontFacingCameraGingerbread() {

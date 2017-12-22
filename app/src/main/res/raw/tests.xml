@@ -7,8 +7,8 @@
         <publish_buffer_time>0.5</publish_buffer_time>
         <subscribe_buffer_time>0.5</subscribe_buffer_time>
         <port>8554</port>
-        <stream1>jstream1</stream1>
-        <stream2>jstream2</stream2>
+        <stream1>stream1</stream1>
+        <stream2>stream2</stream2>
         <context>live</context>
         <camera_width>640</camera_width>
         <camera_height>360</camera_height>
@@ -103,6 +103,17 @@
 
             <name>Publish - Camera Swap</name>
             <class>PublishCameraSwapTest</class>
+        </Test>
+
+        <Test title="Publish - Custom Microphone">
+
+            <description>Uses a custom controller to modify the microphone input, changing its volume over time.</description>
+
+            <Properties>
+            </Properties>
+
+            <name>Publish - Custom Microphone</name>
+            <class>PublishCustomMicTest</class>
         </Test>
 
         <Test title="Publish - Custom Video Source">
