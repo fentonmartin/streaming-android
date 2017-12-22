@@ -21,11 +21,13 @@ public class PublishCustomMicTest extends PublishTest {
 
         private float gain = 1.0f;
         private int mod = 1;
+        private double lastTime = 0;
 
         @Override
         public void processData(byte[] samples, double streamtimeMill) {
 
-            modifyGain(streamtimeMill);
+            modifyGain(streamtimeMill - lastTime);
+            lastTime = streamtimeMill;
 
             int s;
             for(int i = 0; i < samples.length; i++){
