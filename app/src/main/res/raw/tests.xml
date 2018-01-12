@@ -31,6 +31,17 @@
             <class>Home</class>
         </Test>
 
+        <Test title="Subscribe - Stream Manager Bandwidth Test">
+
+            <description>A subscribe example that connects to a cluster server with the Stream Manager and watches for bandwidth issues.</description>
+
+            <Properties>
+            </Properties>
+
+            <name>Subscribe - Stream Manager Bandwidth Test</name>
+            <class>SubscribeStreamManagerBandwidthTest</class>
+        </Test>
+
         <Test title="Publish">
 
             <description>Simple publish example!</description>
